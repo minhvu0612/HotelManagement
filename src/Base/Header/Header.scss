@@ -1,0 +1,98 @@
+:root{
+    --color: rgb(214, 196, 93);
+}
+.header{
+    // header
+    width: 100%;
+    padding: 10px 0px;
+    box-sizing: border-box;
+    display: flex;
+    background-color: rgb(248, 247, 249);
+    opacity: 0.7;
+    color: black;
+
+    .header-left{
+        width: 30%;
+        text-align: left;
+        padding-left: 120px;
+        box-sizing: border-box;
+
+        .header-left-logo{
+            width: 70px;
+            height: 70px;
+        }
+    }
+
+    .header-right{
+        width: 70%;
+        text-align: right;
+        padding-right: 120px;
+        box-sizing: border-box;
+        margin: 5px 0px;
+
+        .header-right-information{
+            display: flex;
+            justify-content: right;
+            font-size: 0.75em;
+            margin-right: 10px;
+
+            .header-right-information-bolder{
+                margin-right: 10px;
+                margin-left: -10px;
+            }
+
+            .header-right-information-child{
+                display: flex;
+                align-items: center;
+                margin-right: 20px;
+
+                .header-right-information-child-script{
+                    margin-left: 5px;
+                }
+
+                .header-right-information-text{
+                    width: 18px;
+                    height: 14px;
+                }
+            }
+
+            .phone, .email{
+                transition: 0.3s;
+            }
+
+            .phone:hover, .email:hover{
+                text-decoration: underline;
+                cursor: pointer;
+                color: var(--color);
+            }
+
+        }
+
+        .header-right-menu{
+            font-size: 0.9em;
+            margin-top: 25px;
+
+            .header-right-menu-nav{
+
+                .header-right-menu-nav-content{
+                    list-style: none;
+                    display: flex;
+                    justify-content: right;
+
+                    .header-right-menu-nav-item{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-right: 30px;
+                        transition: 0.3s;
+                    }
+
+                    .header-right-menu-nav-item:hover{
+                        cursor: pointer;
+                        color: var(--color);
+                    }
+                }
+            }
+        }
+    }
+}
