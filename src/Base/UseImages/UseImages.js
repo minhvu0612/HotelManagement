@@ -10,9 +10,12 @@ import family from "../../Asset/Images/Rooms/Family.jpg";
 import suite from "../../Asset/Images/Rooms/Suite.jpg";
 import superior from "../../Asset/Images/Rooms/Superior.jpg";
 
+import hoavan from "../../Asset/Images/Title-hoavan.png";
+
 export {
     logo, vietNam, england,
     banner_01, banner_02,
     previous, next,
-    dulexe, family, suite, superior
+    dulexe, family, suite, superior, 
+    hoavan
 };

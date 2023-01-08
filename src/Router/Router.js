@@ -1,6 +1,7 @@
 // Router In Website
 
 import HomePage from "../Layout/HomePage/HomePage";
+import IntroducePage from "../Layout/IntroducePage/IntroducePage";
 
 export const router = [
     {
@@ -11,7 +12,7 @@ export const router = [
     {
         path : '/gioi-thieu',
         exact : false,
-        main : <>Con Cak</>
+        main : <IntroducePage />
     },
     {
         path : '/phong-gia',
