@@ -1,10 +1,19 @@
 import './App.css';
-import HomePage from './Layout/HomePage/HomePage';
+import { router } from './Router/Router';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <HomePage />
+      <Router>
+        <Routes>
+          {
+            router.map((element, key) => 
+              <Route exact = {element.exact} path = {element.path} element = {element.main} key = {key} />
+            )
+          }
+        </Routes>
+      </Router>
     </div>
   );
 }

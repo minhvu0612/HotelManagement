@@ -54,15 +54,19 @@ export default class Header extends React.Component{
                             <FaPhone size={15} /> 
                             <p className = "header-right-information-child-script">+84933534999</p>
                         </div>
+
                         <div className = "header-right-information-child email">
                             <MdEmail size={17} /> 
                             <p className = "header-right-information-child-script">vongxuahotel@gmail.com</p>
                         </div>
+
                         <div className = "header-right-information-bolder"></div>
+
                         <div className = "header-right-information-child">
                             <img src={england} alt="text-eng" className = "header-right-information-text" /> 
                             <p className = "header-right-information-child-script">ENGLISH</p>
                         </div>
+                        
                         <div className = "header-right-information-child">
                             <img src={vietNam} alt="text-vie" className = "header-right-information-text" /> 
                             <p className = "header-right-information-child-script">TIẾNG VIỆT</p>
@@ -72,55 +76,72 @@ export default class Header extends React.Component{
                     <div className = "header-right-menu">
                         <nav className = "header-right-menu-nav">
                             <ul className = "header-right-menu-nav-content">
+
                                 <li className = "header-right-menu-nav-item">
-                                    <p className = "header-right-menu-nav-item-content">TRANG CHỦ</p>
+                                    <p className = "header-right-menu-nav-item-content"
+                                        onClick={() => window.location.href = "/"}>TRANG CHỦ</p>
                                     <span className = "header-right-menu-nav-item-notice">
                                         <Notice content = "Trang chủ" />
                                     </span>
                                 </li>
+
                                 <li className = "header-right-menu-nav-item">
-                                    <p className = "header-right-menu-nav-item-content">GIỚI THIỆU</p>
+                                    <p className = "header-right-menu-nav-item-content" 
+                                        onClick={() => window.location.href = "/gioi-thieu"}>GIỚI THIỆU</p>
                                     <span className = "header-right-menu-nav-item-notice">
                                         <Notice content = "Giới thiệu" />
                                     </span>
                                 </li>
+
                                 <li className = "header-right-menu-nav-item header-right-menu-nav-item-group">
-                                    <p className = "header-right-menu-nav-item-content">PHÒNG & GIÁ <IoIosArrowDown size={20} style={{marginLeft: 6 + "px"}} /></p>
+                                    <p className = "header-right-menu-nav-item-content"
+                                        onClick={() => window.location.href = "/phong-gia"}>PHÒNG & GIÁ <IoIosArrowDown size={20} style={{marginLeft: 6 + "px"}} /></p>
                                     <span className = "header-right-menu-nav-item-notice">
                                         <Notice content = "Phòng & Giá" />
                                     </span>
                                     <span className = "header-right-menu-nav-item-btn-group"><ButtonGroup typeRoom = {this.state.rooms} /></span>
                                 </li>
+
                                 <li className = "header-right-menu-nav-item">
-                                    <p className = "header-right-menu-nav-item-content">DỊCH VỤ & TIỆN ÍCH</p>
+                                    <p className = "header-right-menu-nav-item-content"
+                                        onClick={() => window.location.href = "/dich-vu-tien-ich"}>DỊCH VỤ & TIỆN ÍCH</p>
                                     <span className = "header-right-menu-nav-item-notice">
                                         <Notice content = "Dịch vụ và tiện tích" />
                                     </span>
                                 </li>
+
                                 <li className = "header-right-menu-nav-item">
-                                    <p className = "header-right-menu-nav-item-content">ƯU ĐÃI</p>
+                                    <p className = "header-right-menu-nav-item-content"
+                                        onClick={() => window.location.href = "/uu-dai"}>ƯU ĐÃI</p>
                                     <span className = "header-right-menu-nav-item-notice">
                                         <Notice content = "Ưu đãi" />
                                     </span>
                                 </li>
+
                                 <li className = "header-right-menu-nav-item">
-                                    <p className = "header-right-menu-nav-item-content">THƯ VIỆN ẢNH</p>
+                                    <p className = "header-right-menu-nav-item-content"
+                                        onClick={() => window.location.href = "/thu-vien-anh"}>THƯ VIỆN ẢNH</p>
                                     <span className = "header-right-menu-nav-item-notice">
                                         <Notice content = "Thư viện ảnh" />
                                     </span>
                                 </li>
+
                                 <li className = "header-right-menu-nav-item">
-                                    <p className = "header-right-menu-nav-item-content">TOURS</p>
+                                    <p className = "header-right-menu-nav-item-content"
+                                        onClick={() => window.location.href = "/tours"}>TOURS</p>
                                     <span className = "header-right-menu-nav-item-notice">
                                         <Notice content = "Tours" />
                                     </span>
                                 </li>
+
                                 <li className = "header-right-menu-nav-item">
-                                    <p className = "header-right-menu-nav-item-content">ĐẶT PHÒNG</p>
+                                    <p className = "header-right-menu-nav-item-content"
+                                        onClick={() => window.location.href = "/dat-phong"}>ĐẶT PHÒNG</p>
                                     <span className = "header-right-menu-nav-item-notice">
                                         <Notice content = "Đặt phòng" />
                                     </span>
                                 </li>
+
                             </ul>
                         </nav>
                     </div>
