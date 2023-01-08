@@ -1,15 +1,17 @@
 :root{
-    --color: rgb(214, 196, 93);
+    --color: rgb(199, 174, 34);
 }
 .header{
     // header
     width: 100%;
-    padding: 10px 0px;
+    padding: 15px 0px;
     box-sizing: border-box;
     display: flex;
-    background-color: rgb(248, 247, 249);
-    opacity: 0.7;
+    background-color: white;
+    opacity: 0.9;
     color: black;
+    position: fixed;
+    z-index: 100;
 
     .header-left{
         width: 30%;
@@ -18,7 +20,7 @@
         box-sizing: border-box;
 
         .header-left-logo{
-            width: 70px;
+            width: 80px;
             height: 70px;
         }
     }
@@ -85,14 +87,58 @@
                         align-items: center;
                         margin-right: 30px;
                         transition: 0.3s;
+                        position: relative;
+
+                        .header-right-menu-nav-item-content{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+
+                        .header-right-menu-nav-item-notice{
+                            display: none;
+                            position: absolute;
+                            top: 100%;
+                            //left: 50%;
+                            width: 100%;
+                            transition: 0.3s;
+                            z-index: 1;
+                            padding-left: 100%;
+                        }
+
+                        .header-right-menu-nav-item-notice:hover{
+                            display: block;
+                        }
+
+                        .header-right-menu-nav-item-btn-group{
+                            display: none;
+                            position: absolute;
+                            top: 200%;
+                            left: 0%;
+                            width: 100%;
+                            transition: 0.3s;
+                        }
                     }
 
                     .header-right-menu-nav-item:hover{
                         cursor: pointer;
                         color: var(--color);
+
+                        .header-right-menu-nav-item-btn-group{
+                            display: block;
+                        }
+                    }
+
+                    .header-right-menu-nav-item-content:hover ~ .header-right-menu-nav-item-notice{
+                        display: block;
                     }
                 }
             }
         }
     }
+}
+
+.header-scroll{
+    // header
+    padding: 10px 0px;
 }
