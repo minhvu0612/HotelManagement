@@ -5,9 +5,14 @@ import banner_01 from "../../Asset/Images/Banner-01.jpg";
 import banner_02 from "../../Asset/Images/Banner-02.jpg";
 import previous from "../../Asset/Images/Previous.png";
 import next from "../../Asset/Images/Next.png";
+import dulexe from "../../Asset/Images/Rooms/Deluxe.jpg";
+import family from "../../Asset/Images/Rooms/Family.jpg";
+import suite from "../../Asset/Images/Rooms/Suite.jpg";
+import superior from "../../Asset/Images/Rooms/Superior.jpg";
 
 export {
     logo, vietNam, england,
     banner_01, banner_02,
-    previous, next
+    previous, next,
+    dulexe, family, suite, superior
 };

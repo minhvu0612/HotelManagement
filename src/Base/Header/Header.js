@@ -34,9 +34,9 @@ export default class Header extends React.Component{
     }
 
     componentDidMount() {
-        // do something
-        var x = document.getElementById("header").offsetTop;
-        console.log(x);
+        // get offset header
+        //var x = document.getElementById("header").offsetTop;
+        //console.log(x);
     }
 
     render(){
