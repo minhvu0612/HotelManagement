@@ -53,7 +53,7 @@ export default class RoomShow extends React.Component{
                             <p>Max occupancy: {this.state.room.opacity}</p>
                         </div>
                         <div className = "room-show-des-child room-show-des-child-border-none">
-                            <button>ĐẶT PHÒNG <BsArrowRightShort size={30} style={{fontWeight: "bold"}} /></button>
+                            <button onClick={() => this.props.show()}>ĐẶT PHÒNG <BsArrowRightShort size={30} style={{fontWeight: "bold"}} /></button>
                             <div className = "room-show-more">
                                 <p>Xem thêm <BsArrowRightShort size={25} /></p>
                                 <hr />

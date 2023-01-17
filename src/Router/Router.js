@@ -2,6 +2,9 @@
 
 import HomePage from "../Layout/HomePage/HomePage";
 import IntroducePage from "../Layout/IntroducePage/IntroducePage";
+import ListRoomPage from "../Layout/ListRoomPage/ListRoomPage";
+import SaleListPage from "../Layout/SaleListPage/SaleListPage";
+import ServiceListPage from "../Layout/ServiceListPage/ServiceListPage";
 
 export const router = [
     {
@@ -17,6 +20,16 @@ export const router = [
     {
         path : '/phong-gia',
         exact : false,
-        main : <></>
+        main : <ListRoomPage />
     },
+    {
+        path : '/dich-vu-tien-ich',
+        exact : false,
+        main : <ServiceListPage />
+    },
+    {
+        path : '/uu-dai',
+        exact : false,
+        main : <SaleListPage />
+    }
 ] 
