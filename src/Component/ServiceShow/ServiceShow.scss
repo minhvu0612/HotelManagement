@@ -1,0 +1,38 @@
+.service-show{
+    display: flex;
+    margin-bottom: 50px;
+
+    .service-show-content{
+        padding: 50px 0px 50px 70px;
+        h3{
+            font-size: 25px;
+            font-weight: normal;
+            margin-bottom: 40px;
+        }
+
+        h3:hover{
+            cursor: pointer;
+        }
+
+        .service-show-content-des{
+            margin-bottom: 40px;
+        }
+
+        .service-show-more{
+            color: rgb(87, 85, 85);
+            .service-show-more-btn{
+                display: flex;
+                align-items: center;
+            }
+
+            hr{
+                width: 100px;
+            }
+        }
+
+        .service-show-more:hover{
+            color: black;
+            cursor: pointer;
+        }
+    }
+}

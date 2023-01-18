@@ -8,13 +8,13 @@ import RoomShow from "../../Component/RoomShow/RoomShow";
 import { GrFormClose } from "react-icons/gr";
 
 /* import styles */
-import "./ListRoomPage.scss";
+import "./AlbumPage.scss";
 
-export default function ListRoomPage(){
+export default function AlbumPage(){
 
     const [list, setList] = useState(null);
 
-    const [order, setOrder] = useState("list-room-order-room-disable");
+    const [order, setOrder] = useState("album-order-room-disable");
 
     const [infor, setInfor] = useState({
         title: "Ông",
@@ -32,11 +32,11 @@ export default function ListRoomPage(){
     });
 
     const showForm = () => {
-        setOrder("list-room-order-room");
+        setOrder("album-order-room");
     }
 
     const closeForm = () => {
-        setOrder("list-room-order-room-disable");
+        setOrder("album-order-room-disable");
     }
 
     useEffect(() => {
@@ -83,35 +83,26 @@ export default function ListRoomPage(){
 
     return(
         <>
-        <div className = "list-room list-room-order">
+        <div className = "album album-order">
             <Header />
-            <div className = "list-room-main">
+            <div className = "album-main">
                 <Banner />
-                <div className = "list-room-main-des">
-                    <h1 className = "list-room-main-des-title">Phòng & Giá</h1>
-                    <p className = "list-room-main-des-content">
-                        <span style = {{fontWeight: "bold"}}>Khách sạn Vọng Xưa ở Hà Nội</span> giá rẻ gần đại học kinh tế quốc dân này là một 
-                        trong những khách sạn sang trọng giá rẻ tại Hà Nội có không gian lý tưởng.
-                        Đó là một không gian sang trọng, không mất đi vẻ thân thiện và gần gũi. 
-                        Bên cạnh đó, đội ngũ nhân viên trẻ trung và nhiệt tình luôn cố gắng phục 
-                        vụ du khách một cách thân thiện và nhiệt tình nhất. 
-                        <span style = {{fontWeight: "bold"}}> Hãy đặt phòng Khách sạn Vọng Xưa giá rẻ gần đại học kinh tế quốc dân</span> này ngay 
-                        hôm nay để có một kỳ nghỉ thật lý thú và khó quên bên gia đình và bạn bè của mình nhé.
-                    </p>
-                    <br />
-                    <br />
-                    <p>
-                        Liên hệ đặt phòng | 02438693939 - 0933534999
-                    </p>
-                    <div className = "list-room-main-des-img"><img src = {hoavan} alt = "hoavan" /></div>
+                <div className = "album-main-des">
+                    <h1 className = "album-main-des-title">Thư Viện Ảnh</h1>
+                    <h3 style = {{color: "black", fontWeight: "normal", textAlign: "center"}}>TẤT CẢ ẢNH</h3>
+                    <div className = "album-main-des-img"><img src = {hoavan} alt = "hoavan" /></div>
                 </div>
             </div>
             {
                 list ? (
-                    <div className = "list-room-rooms">
+                    <div className = "album-rooms">
+                        <div className = "album-rooms-child">
                         {
-                            list.map((element, key) => <RoomShow key = {key} room = {element} show={showForm} />)
+                            list.map((element, key) => (key === list.length-1) ? 
+                            <RoomShow pd_top = {20} margin = {0} border = {"none"} key = {key} room = {element} show={showForm} />:
+                            <RoomShow pd_top = {20} border = {"none"} key = {key} room = {element} show={showForm} />)
                         }
+                        </div>
                     </div>
                 ):null
             }
@@ -125,13 +116,13 @@ export default function ListRoomPage(){
             // Đặt Phòng
         }
         <div className = {order}>
-            <form className="list-room-order-form">
-                <div className = "list-room-order-form-close" onClick={() => closeForm()}><GrFormClose size={35} /></div>
+            <form className="album-order-form">
+                <div className = "album-order-form-close" onClick={() => closeForm()}><GrFormClose size={35} /></div>
                 <h1>ĐẶT PHÒNG</h1>
-                <div className = "list-room-order-form-hr"><hr /></div>
+                <div className = "album-order-form-hr"><hr /></div>
                 <h3>Thông tin của bạn</h3>
 
-                <div className = "list-room-order-form-1">
+                <div className = "album-order-form-1">
                     <div>
                         <label>Tiêu đề:<span style={{color: "red"}}>*</span></label><br />
                         <select 
@@ -442,7 +433,7 @@ export default function ListRoomPage(){
                 </div>
 
                 <h3>Yêu cầu của bạn</h3>
-                <div className = "list-room-order-form-1">
+                <div className = "album-order-form-1">
                     <div>
                         <label>Ngày đến:<span style={{color: "red"}}>*</span></label><br />
                         <input type="date" 
@@ -491,13 +482,13 @@ export default function ListRoomPage(){
                     </div>
                 </div>
                 
-                <div className = "list-room-order-form-des">
+                <div className = "album-order-form-des">
                     <label className="">Tin nhắn/ câu hỏi của bạn</label>
                     <textarea onChange={(e) => setInfor(prevInfor => ({
                                 ...prevInfor, des: e.target.value
                             }))} defaultValue={infor.des}></textarea>
                 </div>
-                <div className = "list-room-order-form-btn">
+                <div className = "album-order-form-btn">
                     <button onClick={
                     (e) => {
                         //e.preventDefault();

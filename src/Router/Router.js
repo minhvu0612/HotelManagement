@@ -1,5 +1,5 @@
 // Router In Website
-
+import AlbumPage from "../Layout/AlbumPage/AlbumPage";
 import HomePage from "../Layout/HomePage/HomePage";
 import IntroducePage from "../Layout/IntroducePage/IntroducePage";
 import ListRoomPage from "../Layout/ListRoomPage/ListRoomPage";
@@ -31,5 +31,20 @@ export const router = [
         path : '/uu-dai',
         exact : false,
         main : <SaleListPage />
+    },
+    {
+        path: '/thu-vien-anh',
+        exact: false,
+        main: <AlbumPage />
+    },
+    {
+        path: '/tours',
+        exact: false,
+        main: <></>
+    },
+    {
+        path: '/dat-phong',
+        exact: false,
+        main: <></>
     }
 ] 
