@@ -15,6 +15,7 @@ export default function ServiceListPage(){
     const [services, setService] = useState(null);
 
     useEffect(() => {
+        document.getElementById("title").innerHTML = "Service";
         const services = [
             {
                 src: transport,

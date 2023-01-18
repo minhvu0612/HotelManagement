@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Banner from "../../Base/Banner/Banner";
 import Footer from "../../Base/Footer/Footer";
 import Header from "../../Base/Header/Header";
@@ -8,6 +9,10 @@ import { hoavan } from "../../Base/UseImages/UseImages";
 import "./IntroducePage.scss";
 
 export default function IntroducePage(){
+
+    useEffect(() => {
+        document.getElementById("title").innerHTML = "Giới thiệu";
+    }, []);
 
     return(
         <div className = "introduce">

@@ -40,6 +40,7 @@ export default function AlbumPage(){
     }
 
     useEffect(() => {
+        document.getElementById("title").innerHTML = "Thư viện ảnh";
         const room = [
             {
                 src: suite,

@@ -14,6 +14,7 @@ export default function SaleListPage(){
     const [sales, setSale] = useState(null);
 
     useEffect(() => {
+        document.getElementById("title").innerHTML = "Sale";
         const sales = [
             {
                 src: sale_1,

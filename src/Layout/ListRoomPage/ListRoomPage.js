@@ -40,6 +40,7 @@ export default function ListRoomPage(){
     }
 
     useEffect(() => {
+        document.getElementById("title").innerHTML = "Phòng & Giá";
         const room = [
             {
                 src: suite,

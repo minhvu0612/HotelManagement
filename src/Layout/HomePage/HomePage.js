@@ -14,6 +14,7 @@ function HomePage(){
     const [rooms, setRooms] = useState([]);
 
     useEffect(() => {
+        document.getElementById("title").innerHTML = "Home";
         setRooms([
             {
                 src: suite,
